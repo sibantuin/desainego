@@ -2,6 +2,39 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const testimonials = [
+    {
+      image: "/works/WPP.svg",
+      text: "we assist Action+ & WPP to design their annual event in Indonesia, adjusting the visuals with Balinese culture.",
+      link: "https://www.behance.net/gallery/227977991/WPP-Stream-Indonesia-2025-Event-Design"
+    },
+    {
+      image: "/works/BBF.svg",
+      text: "we translated the IISMA vision regarding study abroad into visual concepts and event design.",
+      link: "https://www.behance.net/gallery/227900717/Beyond-Borders-Fest-2025-Event-Design"
+    },
+    {
+      image: "/works/BPC.svg",
+      text: "we helped BudiPekerti Creative to build a logo that matches education organizations as their target market.",
+      link: "https://www.behance.net/gallery/227809623/BudiPekerti-Creative-Logo-Design"
+    },
+    {
+      image: "/works/UII.svg",
+      text: "we translated the UII FPSCS brand value into key visual concepts and merchandise design.",
+      link: "https://www.behance.net/gallery/209227837/FPSCS-UII-Official-Merchandise"
+    },
+    {
+      image: "/works/CC.svg",
+      text: "we assist Action+ & Coca-Cola Company Indonesia in designing their brand activation events.",
+      link: "https://www.behance.net/gallery/228225707/Coca-Cola-Brand-Activation-Design"
+    },
+    {
+      image: "/works/BSP.svg",
+      text: "we assist Behind Studio & Pertamina Jogja in designing social media that matches their customer expectations.",
+      link: "https://www.behance.net/gallery/209453751/Pertamina-Jogja-Surabaya-Social-Media-Design"
+    },
+  ];
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       <div className="">
@@ -86,9 +119,7 @@ export default function Home() {
         <h2 className="text-[32px] text-start leading-[1.04] tracking-[-0.05em] mb-12 w-full max-w-7xl mx-auto px-24">
           let’s satisfy our customer (design) ego with <br /><span className="italic">desainego.</span>
         </h2>
-        <p className="text-[32px] text-start leading-[1.04] tracking-[-0.05em] mb-12 w-full max-w-7xl mx-auto px-24">
-          we are experienced in:
-        </p>
+
 
         <div className="grid grid-cols-3 gap-y-6 justify-items-center max-w-4xl mx-auto py-16">
           <div className="flex flex-col items-center text-center">
@@ -112,11 +143,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="bg-black text-white pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
-        <div className="max-w-6xl mx-auto text-center mb-12 px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Testimonials</h2>
-          <p className="text-[#7BDB16] text-base sm:text-lg md:text-xl mt-2 mb-10">
-            Don’t take our word for it—here’s what our partners say
+      <div id="works" className="bg-black text-white pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
+        <div className="max-w-6xl mx-auto text-center mb-12 px-10">
+          <p className="text-[32px] text-start leading-[1.04] tracking-[-0.05em] pb-20 w-full">
+            our prior works:
           </p>
         </div>
         <div className="relative overflow-hidden">
@@ -124,51 +154,54 @@ export default function Home() {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <div
                 key={index}
-                className="min-h-[580px] sm:min-h-[580px] w-[280px] sm:w-[350px] md:w-[400px] 
-                            p-6 sm:p-8 rounded-xl border border-[#7BDB16] relative flex flex-col justify-between"
+                className="min-h-[580px] sm:min-h-[580px] w-[280px] sm:w-[350px] md:w-[450px] 
+                        p-10 rounded-xl border border-[#F26837] relative flex flex-col justify-start"
               >
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 justify-center items-center">
                   <Image
-                    src={testimonial.company}
-                    width={100}
-                    height={100}
-                    alt={testimonial.name + " logo"}
-                    className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
+                    src={testimonial.image}
+                    width={350}
+                    height={200}
+                    alt="testimonial image"
+                    className="rounded-lg pointer-events-none object-cover"
                   />
-                  <p className="text-xl sm:text-2xl text-[#8CF719] font-bold">
-                    {testimonial.quote}
-                  </p>
-                  <p className="text-white text-sm sm:text-base leading-relaxed">
-                    {testimonial.text}
-                  </p>
+                  <p className="text-white text-sm sm:text-base leading-relaxed mx-4">{testimonial.text}</p>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 px-6 sm:px-8 pb-6 pt-4">
-                  <p className="font-semibold text-base sm:text-lg">{testimonial.name}</p>
-                  <p className="text-xs sm:text-sm mt-1">{testimonial.role}</p>
+                <div className="mt-4 mx-4">
+                  <Link href={testimonial.link} className="text-white text-sm hover:underline">
+                    Read more →
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
+
+      <div className="relative flex flex-col items-end">
+        <div className="">
+          <Link href="/about" className="pr-58 underline">click here for more details...</Link>
+        </div>
+      </div>
 
       <div className="bg-black text-white px-4 sm:px-6 md:px-20">
-        <div className="max-w-6xl mx-auto border-t border-l border-r border-[#575757] rounded-t-[40px] pt-20 px-4 sm:px-6 md:px-20 pb-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="space-y-6">
+        <div className="max-w-7xl mx-auto pt-20 pb-6">
+          <div className="flex flex-col items-center justify-center mb-12">
+            <button className="bg-[#F26837] sm:min-h-[144px] md:w-[1050px] flex items-center justify-center text-white text-4xl font-bold mx-auto px-10 py-4 transition">
               <Image
-                src="/logo_desainego.svg"
-                alt="Marktwoosh Logo"
-                width={100}
-                height={100}
-                className="w-24 h-24"
+                src="/back_letscollab.svg"
+                alt=""
+                width={250}
+                height={150}
+                className="mx-auto"
               />
-              <p className="text-sm text-white leading-relaxed text-justify text-left md:text-left max-w-md">
-                To make high-quality digital marketing services affordable and accessible for everyone, enabling businesses of all sizes to market smarter and grow faster.
-              </p>
-
+            </button>
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center mx-30 gap-10 mb-12">
+            <div className="flex flex-col items-center md:items-start gap-6">
+              <p className="text-sm">let’s connect on social media:</p>
               <div className="flex gap-6">
-                {["fb", "ig", "x", "linkedin"].map((icon) => (
+                {["be", "ig", "x", "linkedin", "tt"].map((icon) => (
                   <Link href="#" key={icon}>
                     <Image
                       src={`/icon/ic_${icon}.svg`}
@@ -181,23 +214,26 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="space-y-3">
-              <h4 className="text-lg font-bold">Contact Us</h4>
-              <p>123-456-7890</p>
-              <p>hello@marktwoosh.com</p>
-              <p>Lorem ipsum</p>
-            </div>
-            <div className="space-y-3">
-              <h4 className="text-lg font-bold">Company</h4>
-              <p>Imprint</p>
-              <p>Data Privacy and Policy</p>
+
+            <div className="flex flex-col items-center md:items-end">
+              <Image
+                src="/logo_desainego.svg"
+                alt="Desainego Logo"
+                width={150}
+                height={150}
+                className="w-40 h-auto mb-2"
+              />
+              <p className="text-sm text-white">user-centered design studio.</p>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
-            Copyright © 2025
+
+          <div className="pt-6 text-center text-sm">
+            <p>Data Policy and Privacy</p>
+            <p className="text-gray-400">Copyright © 2025</p>
           </div>
         </div>
       </div>
+
     </div>
   );
 }
