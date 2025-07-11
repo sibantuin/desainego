@@ -39,8 +39,9 @@ export default function Home() {
   const [isHover, setIsHover] = useState(false);
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
+
       {/* Background Ego */}
-      <div className="">
+      <div id="home">
         <Image
           src="/back_ego.svg"
           alt="Ego Background"
@@ -52,10 +53,10 @@ export default function Home() {
 
       {/* Navigation bar */}
       <div className="relative flex justify-end px-6 sm:px-12 md:px-24 lg:px-36 py-6 sm:py-8 md:py-16 lg:py-24">
-        <Link href="/works" className="px-2 sm:px-4 py-2 hover:underline">Works</Link>
-        <Link href="/about" className="px-2 sm:px-4 py-2 hover:underline">About us</Link>
-        <Link href="/contact" className="px-2 sm:px-4">
-          <button className="border border-white hover:border-[#F26837] rounded-full px-4 sm:px-6 py-2 text-sm transition-all hover:bg-[#F26837] hover:text-white duration-300 flex items-center">
+        <Link href="#works" className="text-xl px-2 sm:px-4 py-2 hover:underline">Works</Link>
+        <Link href="#contact" className="text-xl px-2 sm:px-4 py-2 hover:underline">About us</Link>
+        <Link href="https://calendly.com/emfahrurozi/30min" className="px-2 sm:px-4">
+          <button className="border border-white hover:border-[#F26837] rounded-full px-4 sm:px-6 py-2 text-xl transition-all hover:bg-[#F26837] hover:text-white duration-300 flex items-center">
             Contact
           </button>
         </Link>
@@ -70,9 +71,8 @@ export default function Home() {
         </div>
       </main>
 
-
       {/* CTA */}
-      <div className="flex flex-col justify-center items-center min-h-[60vh] py-12 sm:py-16 md:py-20 px-4">
+      <div className="flex flex-col justify-center items-center min-h-[60vh] py-12 sm:py-16 md:py-20 lg:py-56 px-4">
         <Image
           src="/logo_desainego.svg"
           alt="Ego Logo"
@@ -88,15 +88,12 @@ export default function Home() {
         </div>
       </div>
 
-
-
       {/* Clients */}
-      <div className="bg-black text-white px-4 pb-20">
+      <div className="bg-black text-white px-4 py-5 sm:py-10 md:py-15 lg:py-20">
         <div className="flex flex-col justify-center gap-y-8">
           <h2 className="text-xl sm:text-2xl md:text-3xl text-start leading-[1.2] tracking-[-0.05em] mb-12 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-24">
             we’ve collaborated with:
           </h2>
-
           <div className="flex justify-center gap-8 sm:gap-12 md:gap-22 flex-wrap py-6">
             <Image src="/brand/BPC.svg" alt="BPC" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
             <Image src="/brand/BBF.svg" alt="BBF" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
@@ -136,6 +133,9 @@ export default function Home() {
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-start leading-[1.2] tracking-[-0.05em] mb-12 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
           let’s satisfy our customer (design) ego with <br /><span className="font-bold italic">desainego.</span>
         </h2>
+        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-start leading-[1.2] tracking-[-0.05em] mb-12 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24">
+          we are experienced in:
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-4 justify-items-center max-w-4xl mx-auto py-16">
           <div className="flex flex-col items-center text-center">
             <Image src="/service/BLVI.svg" alt="Brand Logo" width={150} height={150} className="pointer-events-none" />
@@ -146,14 +146,15 @@ export default function Home() {
           <div className="flex flex-col items-center text-center">
             <Image src="/service/SMO.svg" alt="Social Media" width={150} height={150} className="pointer-events-none" />
           </div>
+
           <div className="flex flex-col items-center text-center">
-            <Image src="/service/PC.svg" alt="Printed" width={150} height={150} className="pointer-events-none" />
+            <Image src="/service/PC.svg" alt="Printed" width={100} height={100} className="pointer-events-none" />
           </div>
           <div className="flex flex-col items-center text-center">
-            <Image src="/service/PP.svg" alt="Product" width={150} height={150} className="pointer-events-none" />
+            <Image src="/service/PP.svg" alt="Product" width={100} height={100} className="pointer-events-none" />
           </div>
           <div className="flex flex-col items-center text-center pt-8 md:pt-16">
-            <Image src="/service/AM.svg" alt="And More" width={150} height={150} className="pointer-events-none" />
+            <Image src="/service/AM.svg" alt="And More" width={100} height={100} className="pointer-events-none" />
           </div>
         </div>
       </div>
@@ -196,7 +197,7 @@ export default function Home() {
       {/* Click */}
       <div className="w-full flex justify-end pb-18">
         <Link
-          href="/about"
+          href="https://behance.net/emfahrurozi"
           className="text-xl sm:text-2xl md:text-3xl underline mr-6 sm:mr-12 md:mr-82"
         >
           click here for more details...
@@ -204,24 +205,25 @@ export default function Home() {
       </div>
 
       {/* Footer Section*/}
-      <div className="bg-black text-white px-4 sm:px-6 md:px-20">
+      <div id="contact" className="bg-black text-white px-4 sm:px-6 md:px-20">
         <div className="max-w-7xl mx-auto md:pt-20 pb-6">
           {/* Big Button */}
           <div className="flex flex-col items-center justify-center mb-12">
-            <button
-              className="bg-[#F26837] hover:bg-white sm:min-h-[144px] md:w-[1050px] flex items-center justify-center text-white text-4xl font-bold mx-auto px-10 py-4 transition"
-              onMouseEnter={() => setIsHover(true)}
-              onMouseLeave={() => setIsHover(false)}
-            >
-              <Image
-                src={isHover ? "/back_letscollab_org.svg" : "/back_letscollab.svg"}
-                alt=""
-                width={250}
-                height={150}
-                className="mx-auto transition-all duration-300"
-              />
-            </button>
-
+            <Link href="https://calendly.com/emfahrurozi/30min">
+              <button
+                className="bg-[#F26837] hover:bg-white sm:min-h-[144px] md:w-[1050px] flex items-center justify-center text-white text-4xl font-bold mx-auto px-10 py-4 transition"
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+              >
+                <Image
+                  src={isHover ? "/back_letscollab_org.svg" : "/back_letscollab.svg"}
+                  alt=""
+                  width={250}
+                  height={150}
+                  className="mx-auto transition-all duration-300"
+                />
+              </button>
+            </Link>
           </div>
           {/* Social Media and Logo */}
           <div className="flex flex-col md:flex-row justify-between items-center mx-30 gap-10 mb-12">
@@ -231,7 +233,7 @@ export default function Home() {
                 {[
                   { icon: "be", href: "https://behance.net/emfahrurozi" },
                   { icon: "ig", href: "https://instagram.com/desainego_" },
-                  { icon: "x", href: "https://x.com/emfahrurozi" },
+                  { icon: "x", href: "https://x.com/desainego_" },
                   { icon: "linkedin", href: "https://www.linkedin.com/company/desainego" },
                   { icon: "tt", href: "https://www.tiktok.com/@desainego" },
                 ].map((item) => (
@@ -251,22 +253,21 @@ export default function Home() {
                   </Link>
                 ))}
               </div>
-
-
             </div>
             {/* Logo & Text */}
             <div className="flex flex-col items-center md:items-end">
-              <Image
-                src="/logo_desainego.svg"
-                alt="Desainego Logo"
-                width={150}
-                height={150}
-                className="w-40 h-auto mb-2"
-              />
+              <Link href="#home">
+                <Image
+                  src="/logo_desainego.svg"
+                  alt="Desainego Logo"
+                  width={150}
+                  height={150}
+                  className="w-40 h-auto mb-2"
+                />
+              </Link>
               <p className="text-sm text-white">user-centered design studio.</p>
             </div>
           </div>
-
           <div className="pt-6 text-center text-sm">
             <p>Data Policy and Privacy</p>
             <p className="text-gray-400">Copyright © 2025</p>
