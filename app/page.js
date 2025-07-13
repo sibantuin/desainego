@@ -53,10 +53,10 @@ export default function Home() {
 
       {/* Navigation bar */}
       <div className="relative flex justify-end px-6 sm:px-12 md:px-24 lg:px-36 py-6 sm:py-8 md:py-16 lg:py-24">
-        <Link href="#works" className="text-xl px-2 sm:px-4 py-2 hover:underline">Works</Link>
-        <Link href="#contact" className="text-xl px-2 sm:px-4 py-2 hover:underline">About us</Link>
+        <Link href="#works" className="text-xs sm:text-xl px-2 sm:px-4 py-2 hover:underline">Works</Link>
+        <Link href="#contact" className="text-xs sm:text-xl px-2 sm:px-4 py-2 hover:underline">About us</Link>
         <Link href="https://calendly.com/emfahrurozi/30min" className="px-2 sm:px-4">
-          <button className="border border-white hover:border-[#F26837] rounded-full px-4 sm:px-6 py-2 text-xl transition-all hover:bg-[#F26837] hover:text-white duration-300 flex items-center">
+          <button className="border border-white hover:border-[#F26837] rounded-full px-4 sm:px-6 py-1 mt-1 sm:mt-0 sm:py-2 text-xs sm:text-xl transition-all hover:bg-[#F26837] hover:text-white duration-300 flex items-center">
             Contact
           </button>
         </Link>
@@ -94,36 +94,37 @@ export default function Home() {
           <h2 className="text-xl sm:text-2xl md:text-3xl text-start leading-[1.2] tracking-[-0.05em] mb-12 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-24">
             we’ve collaborated with:
           </h2>
-          <div className="flex justify-center gap-8 sm:gap-12 md:gap-22 flex-wrap py-6">
-            <Image src="/brand/BPC.svg" alt="BPC" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/BBF.svg" alt="BBF" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/FSD.svg" alt="FSD" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/JD.svg" alt="JD" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/AB.svg" alt="AB" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
+
+          <div className="flex justify-center gap-6 sm:gap-22 flex-wrap py-1 sm:py-6">
+            <Image src="/brand/BPC.svg" alt="BPC" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36 " />
+            <Image src="/brand/BBF.svg" alt="BBF" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/FSD.svg" alt="FSD" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/JD.svg" alt="JD" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/AB.svg" alt="AB" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
           </div>
 
-          <div className="flex justify-center gap-8 sm:gap-12 md:gap-20 flex-wrap">
-            <Image src="/brand/LB.svg" alt="LB" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/L.svg" alt="L" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/B.svg" alt="B" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/CA.svg" alt="CA" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/UII.svg" alt="UII" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
+          <div className="flex justify-center gap-6 sm:gap-20 flex-wrap">
+            <Image src="/brand/LB.svg" alt="LB" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/L.svg" alt="L" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/B.svg" alt="B" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/CA.svg" alt="CA" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/UII.svg" alt="UII" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
           </div>
 
-          <div className="flex justify-center gap-8 sm:gap-12 md:gap-12 flex-wrap py-6">
-            <Image src="/brand/AP.svg" alt="AP" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/OA.svg" alt="OA" width={100} height={50} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/WPP.svg" alt="WPP" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/S.svg" alt="Sprite" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/CC.svg" alt="CocaCola" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/J.svg" alt="Japfa" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
+          <div className="flex justify-center gap-4 sm:gap-12 flex-wrap py-1 sm:py-6">
+            <Image src="/brand/AP.svg" alt="AP" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/OA.svg" alt="OA" width={100} height={50} className="object-contain pointer-events-none max-h-20 w-12 sm:w-24" />
+            <Image src="/brand/WPP.svg" alt="WPP" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/S.svg" alt="Sprite" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/CC.svg" alt="CocaCola" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/J.svg" alt="Japfa" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
           </div>
 
-          <div className="flex justify-center gap-8 sm:gap-12 md:gap-16 flex-wrap mr-0 sm:mr-0 md:mr-72">
-            <Image src="/brand/BS.svg" alt="BS" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/OA.svg" alt="OA" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/P.svg" alt="Pertamina" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
-            <Image src="/brand/Q.svg" alt="Q" width={150} height={100} className="object-contain pointer-events-none max-h-20" />
+          <div className="flex justify-center gap-6 sm:gap-16 flex-wrap mr-24 sm:mr-0 md:mr-72">
+            <Image src="/brand/BS.svg" alt="BS" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/OA.svg" alt="OA" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/P.svg" alt="Pertamina" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
+            <Image src="/brand/Q.svg" alt="Q" width={150} height={100} className="object-contain pointer-events-none max-h-20 w-12 sm:w-36" />
           </div>
         </div>
       </div>
@@ -211,22 +212,22 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center mb-12">
             <Link href="https://calendly.com/emfahrurozi/30min">
               <button
-                className="bg-[#F26837] hover:bg-white sm:min-h-[144px] md:w-[1050px] flex items-center justify-center text-white text-4xl font-bold mx-auto px-10 py-4 transition"
+                className="bg-[#F26837] hover:bg-white min-h-[56px] min-w-[250px] sm:min-h-[144px] md:w-[1050px] flex items-center justify-center text-white text-4xl font-bold mx-auto px-10 py-4 transition"
                 onMouseEnter={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}
               >
                 <Image
                   src={isHover ? "/back_letscollab_org.svg" : "/back_letscollab.svg"}
                   alt=""
-                  width={250}
-                  height={150}
-                  className="mx-auto transition-all duration-300"
+                  width={200}
+                  height={100}
+                  className="min-h-10 mx-auto transition-all duration-300"
                 />
               </button>
             </Link>
           </div>
           {/* Social Media and Logo */}
-          <div className="flex flex-col md:flex-row justify-between items-center mx-30 gap-10 mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-center mx-24 sm:mx-30 gap-10 mb-12">
             <div className="flex flex-col items-center md:items-start gap-6">
               <p className="text-sm">let’s connect on social media:</p>
               <div className="flex gap-3 sm:gap-4 md:gap-6">
