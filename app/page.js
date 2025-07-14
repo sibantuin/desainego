@@ -57,7 +57,7 @@ export default function Home() {
         <Link href="#contact" className="text-xs sm:text-xl px-2 sm:px-4 py-2 hover:underline">About us</Link>
         <Link href="https://calendly.com/emfahrurozi/30min" className="px-2 sm:px-4">
           <button className="border border-white hover:border-[#F26837] rounded-full px-4 sm:px-6 py-1 mt-1 sm:mt-0 sm:py-2 text-xs sm:text-xl transition-all hover:bg-[#F26837] hover:text-white duration-300 flex items-center">
-            Contact
+            Collab
           </button>
         </Link>
       </div>
